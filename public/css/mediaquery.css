@@ -1,0 +1,222 @@
+
+@media only screen and (min-width: 1920px){
+    .day-car-banner {
+        padding: 0rem 0 0 20rem !important;
+    }
+}
+
+/* @media only screen and (min-width: 1540px){
+    .day-car-banner {
+        padding: 0rem 0 0 14rem !important;
+    }
+} */
+
+
+
+
+
+@media only screen and (max-width: 768px){
+    .card-success{
+        padding: 3rem 3rem;
+    }
+    h2.card-success-story-heading {
+        font-size: 35px;
+        line-height: inherit;
+       
+    }    
+    p.card-success-story-text{
+        font-size: 16px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .hero-banner-text {
+        padding-top: 0rem;
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+    .hero-banner-text h1 {
+        font-size: 30px;
+        line-height: inherit;
+    }
+    .hero-banner-text p {
+        font-size: 18px;
+        line-height: inherit;
+    }
+    .kwikbot-section2 {
+        margin-top: 1rem;
+    }
+    .heading-kwikbot h2 {
+        font-size: 20px;
+        line-height: inherit;
+    
+  }
+  .heading-kwikbot{
+    margin-bottom: 1rem;
+  }
+  .generate-quality-leads-content{
+    padding-top: 1rem;
+  }
+  .row.mb-5{
+    margin-bottom: 0rem !important;
+  }
+  .success-story{
+    margin-top: 1rem;
+  }
+  .card-success{
+    padding: 26px;
+  }
+  .warrap.mx-5{
+    margin: 0 !important;
+  }
+  .container.px-5{
+    padding: 0 !important;
+  }
+  button.owl-next{
+    right: 0 !important;
+    padding: 1rem;
+        margin-bottom: inherit;
+    margin-top: inherit;
+
+  }
+  .success-story-cont-top h2{
+    font-size: 30px;
+  }
+  .success-story-cont-top p {
+    font-size: 16px;
+    line-height: inherit;
+}
+.our-approach-heading, .our-approach-heading02, .our-approach-heading03 {
+    margin-top: 3rem;
+}
+.our-approach-heading{
+    padding: inherit;
+}
+.success-story-cont-top p{
+    text-align: left;
+}
+.circle-second {
+    padding: 2rem 2rem
+}
+.be-were{
+    margin-top: 0;
+}
+.circle-second::before {
+    width: 30px;
+    height: 32px;
+    top: 0;
+    left: 10%;
+}
+  button.owl-prev{
+    left: 0 !important;
+  }
+  h2.card-success-story-heading {
+    font-size: 25px;
+    line-height: inherit;
+  }
+  p.card-success-story-text {
+    font-size: 16px;
+    line-height: inherit;
+  
+}
+.circle-second h2 {
+    font-size: 25px;
+    line-height: inherit;
+}
+.circle-second p {
+    font-size: 20px;
+    line-height: inherit;
+}
+.box-card {
+    transform: translateY(0px);
+    padding: 2rem 2rem;
+}
+.circle-second::after {
+    width: 40px;
+    height: 40px;
+    top: 5%;
+    right: 6%;
+}
+.box-card h2 {
+    font-size: 30px;
+    line-height: inherit;
+}
+
+.circle-first::after {
+    width: 30px;
+    height: 30px;
+    top: 0%;
+    right: 32%;
+}
+.nav-link{
+    text-align: left;
+}
+.box-card p {
+    font-size: 16px;
+    line-height: inherit;
+}
+.card-btn-book a{
+    font-size: 16px;
+}
+
+.footer-ul ul li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.day-car-banner {
+    padding: 0rem 0 0 1rem;
+}
+.hero-daycare-banner-text h1,.hero-fitness-banner-text h1{
+    font-size: 30px;
+}
+.hero-daycare-banner-text h1 span,.hero-fitness-banner-text h1 span{
+    font-size: 30px;
+}
+.hero-daycare-banner-text p{
+    font-size: 16px;
+}
+.book-now-day-care a {
+    font-size: 15px;
+    padding: 15px 49px;
+}
+.heading-kwikbot ul li{
+    line-height: inherit;
+}
+.generate-quality-leads-content h3{
+    font-size: 26px;
+}
+.generate-quality-leads-content p{
+    font-size: 16px;
+}
+h2.card-testomonial-heading {
+    font-size: 20px;;
+    line-height: inherit;
+}
+
+.faqs p {
+    font-size: 19px;
+    line-height: inherit;
+}
+.faqs h2 {
+    font-size: 30px;
+
+}
+.faqs-section{
+    margin: 0;
+}
+.hero-daycare-banner-text,.hero-fitness-banner-text {
+    margin-top: 2rem;
+}
+
+.display-none{
+display: none;
+}
+
+.mt-lg-0-mt-sm-3{
+    margin-top: 20px !important;
+}
+
+}

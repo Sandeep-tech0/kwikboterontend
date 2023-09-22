@@ -1,0 +1,184 @@
+
+  
+  .calendar {
+    padding: 29px;
+    border-radius: 45px;
+    background: rgba(59, 66, 196, 0.12);
+    font-size: 16px;
+    box-shadow: 5px -5px 400px #fff;
+  }
+  .label-select{
+    color: #312F2F;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+
+  }
+  
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .month, .year {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #1A1A1A;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+  }
+
+  
+  option {
+    font-weight: 'regular';
+    font-size: 16px;
+    text-transform: none;
+    letter-spacing: 0px;
+  }
+  
+  .week {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+  }
+  .week__day {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+  
+  .date__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .date__number {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition: 0.5s ease;
+  }
+  .date__number:hover {
+    cursor: pointer;
+    background-color: #3B42C4;;
+    color: #fff;
+  }
+  .date__number--true {
+    background-color: #3B42C4;;
+    color: #fff;
+  }
+  select {
+    outline: none;
+}
+  .choosened {
+    color: #1A1A1A;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+.date span{
+    color: #3D3C3A;
+font-family: 'Poppins';
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+
+}
+
+.date-icon-calender {
+    display: flex;
+    margin-right: 3rem;
+ }
+ .date-icon-calender .icon{
+    margin-right: 1rem;
+ }
+
+ .date-icon-calender .icon img {
+    width: 21px;
+}
+.date-icon-calender .icon {
+    margin-right: 8px;
+}
+
+.btn-schedule-a{
+    border-radius: 180px;
+background: #3B42C4;
+display: block;
+color: #FFF;
+text-align: center;
+font-family: 'Poppins';
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+padding: 1rem 0;
+text-decoration: none;
+}
+.arrow-up{
+    border-radius: 5px;
+background: #E7E8F8;
+color: #3B42C4;
+border: 1px solid #E7E8F8;
+padding: 5px 10px;
+margin-bottom: 2rem;
+margin-right: 3rem;
+}
+
+.arrow-down{
+    border-radius: 5px;
+background: #E7E8F8;
+color: #3B42C4;
+border: 1px solid #E7E8F8;
+padding: 5px 10px;
+margin-top: 0.5rem;
+margin-right: 3rem;
+}
+
+.btn-take-time {
+    color: #3B42C4;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 12px;
+    border: 2px solid rgba(59, 66, 196, 0.12);
+    padding: 8px 27px;
+    display: block;
+    background-color: #FFF;
+    margin-bottom: 1.5rem;
+    margin-right: 3rem;
+}
+.btngroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clicked{
+    background: #3B42C4;
+    color: #FFFFFF;
+}

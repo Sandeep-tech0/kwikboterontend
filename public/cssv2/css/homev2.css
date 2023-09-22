@@ -1,0 +1,769 @@
+/*adding Aileron font family with multiple variants using ttf file*/
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Heavy.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-HeavyItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-ExtraLightItalic.ttf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("../fonts/Aileron-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/*adding Aeonic font family with multiple variants using ttf file*/
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aileron-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-AirItalic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Bold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-BoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aileron-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aileron-ExtraLightItalic.ttf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aileron-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aileron-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("../fonts/Aeonik-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+
+body {
+  font-family: "Aileron";
+  font-size: 16px;
+}
+
+h1{font-family: "Aeonik"; font-weight: 500; font-style: normal;}
+
+.home-v2 {
+  padding: 0 76px;
+}
+
+.login-btuun-homev2 {
+  color: #000;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100px;
+  text-decoration: none;
+  border-radius: 180px;
+  border: 1px solid #000;
+  padding: 10px 27px;
+  transition: ease-out 0.3s;
+}
+
+.homev2-banner-heading{
+  padding-top: 20%;
+  padding-left: 10%;
+}
+
+.homev2-banner-heading h1 {
+  color: #282734;
+  font-size: 52px;
+  line-height: 60px;  
+}
+
+.homev2-banner-heading p {
+  color: #3d3c3a;
+  font-size: 19px;
+  font-family: "Aeonik";
+  font-weight: 400;
+  line-height: 26px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  max-width: 500px;
+}
+
+.homev2-banner-heading h1 span {
+  color: #3b42c4;
+}
+
+.book-now-btn-homev2 a {
+  color: #fff;
+  text-align: center;
+  font-family: "Aeonik";
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 180px;
+  background: #000000;
+  padding: 15px 90px;
+  text-decoration: none;
+  transition: 0.5s;
+  border: 1px solid #000000;
+  display: inline-block;
+}
+
+.book-now-btn-homev2 a:hover {
+  box-shadow: inset 400px 0 0 0 #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.social-media-links ul {
+  justify-content: inherit !important;
+}
+
+footer {
+  padding: 0 76px;
+}
+
+.heading-kwikbot-homev2 {
+  padding-bottom: 10%;
+}
+
+.heading-kwikbot-homev2 h2 {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.generate-quality-leads-content-homev2 {
+  padding-top: 150px;
+}
+
+.generate-quality-leads-content-homev2 h3 {
+  color: #1a1a1a;
+  font-family: "Aileron";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 46px;
+  padding-bottom: 20px;
+}
+
+.generate-quality-leads-content-homev2 p {
+  color: #3d3c3a;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.homev2_chat_section {
+  margin-top: 11%;
+  padding: 0 80px;
+}
+
+.ai-bot-box-card-convert-homev2 {
+  width: 350px;
+  border-radius: 24px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  top: 9%;
+  position: absolute;
+  left: -73%;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+}
+
+.ai-bot-box-card-convert-blue-homev2 {
+  border-radius: 32px;
+  background: #6ea8ee;
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.04);
+  width: 312px;
+  position: absolute;
+  top: 40%;
+  left: -53%;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+}
+
+.ai-bot-box-card3-homev2 {
+  width: 300px;
+  border-radius: 24px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  bottom: 20%;
+  position: absolute;
+  left: -58%;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+}
+
+.ai-bot-text-img-automate-yellow-homev2 {
+  border-radius: 32px;
+  width: 257px;
+  flex-shrink: 0;
+  position: absolute;
+  right: -51%;
+  top: 42%;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+}
+
+.ai-bot-text-img-automate-homev2 {
+  border-radius: 32px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  width: 330px;
+  flex-shrink: 0;
+  position: absolute;
+  right: -80%;
+  top: 9%;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+}
+
+.ai-bot-text-img-automate2-homev2 {
+  border-radius: 32px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  width: 330px;
+  flex-shrink: 0;
+  position: absolute;
+  right: -80%;
+  bottom: 9%;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.26);
+}
+
+.box-card-homev2 {
+  border-radius: 45px;
+  background: #000;
+  padding: 5rem 4rem;
+  transform: translateY(-54px);
+  margin: 0 124px;
+}
+
+.box-card-homev2 h2 {
+  color: #fff;
+  text-align: center;
+  font-family: "Aileron";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px;
+}
+
+.box-card-homev2 p {
+  color: #fff;
+  text-align: center;
+  font-family: "Aileron";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 38px;
+}
+
+.card-btn-book-homev2 a {
+  border-radius: 180px;
+  border: 1px solid #fff;
+  padding: 10px 70px;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100px;
+  text-decoration: none;
+  transition: ease-out 0.4s;
+}
+
+.success-story-homev2 {
+  background: #171717;
+  padding-top: 6rem;
+  /* padding-bottom: 6rem; */
+}
+
+.success-story-cont-top-homev2 h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.success-story-cont-top-homev2 p {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 0 16%;
+  margin-bottom: 70px;
+}
+
+button.owl-prev.homev2 {
+  bottom: 40px !important;
+  left: 10%;
+  background: rgba(255, 255, 255, 0.11) !important;
+  opacity: 1 !important;
+  color: #ffffff !important;
+  top: inherit !important;
+  width: 54px;
+  height: 54px;
+  font-size: 15px !important;
+}
+
+button.owl-next.homev2 {
+  left: 16%;
+  background: rgba(255, 255, 255, 0.11) !important;
+  opacity: 1 !important;
+  color: #ffffff !important;
+  top: inherit !important;
+  bottom: 40px !important;
+  width: 54px;
+  height: 54px;
+  font-size: 15px !important;
+}
+
+.card-success-homev2 h3 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 54px;
+  margin-bottom: 30px;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.card-success-homev2 p {
+  color: #a0a4f1;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+.card-success-homev2 p a{
+  color: #a0a4f1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.card-success-homev2 p a:hover{
+  color: #ffffff;
+}
+
+.card-success-homev2 {
+  margin-left: 20%;
+  margin-top: 25%;
+  max-width: 500px;
+}
+
+.card-success-homev2 p span {
+  color: #fff;
+  background-color: #a0a4f1;
+  padding: 4px 7px;
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.image-mobile-homev2 {
+  margin-left: auto;
+  position: relative;
+  text-align: right;
+  max-height: 550px;
+  overflow: hidden;
+}
+.image-mobile-homev2 .ssimg{
+  width: 100%;
+  max-width: 373px;
+  display: inline-block!important;
+  margin-right: 10%;
+}
+.image-mobile-homev2 .chatimg{
+  width: auto!important;
+}
+.icon-chat-mage-chat-homev2 {
+  border-radius: 32px;
+  /* background-image: url(../images/homev2/bg-ai-chat.png); */
+  /* background-image: url("../images/travelling/bg-ligth.png"); */
+  background-repeat: no-repeat;
+  background-image: linear-gradient(119deg, #3B42C473, #3b42c4b8);
+  backdrop-filter: blur(10px);
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+
+.ai-chat-box-homev2 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 100%;
+  max-width: 320px;
+}
+
+.icon-chat-mage-chat-homev2 img {
+  position: absolute;
+  top: -20%;
+  left: -4%;
+}
+
+.icon-chat-mage-chat-homev2 p {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 30px 20px 30px 40px;
+  text-align: left;
+}
+
+.our-approach-homev2 {
+  padding: 176px 76px 76px;
+  background: #f7f7f5;
+  margin-top: -10px;
+}
+
+.white-g-homev2 {
+  border-radius: 40px;
+  background: #fff;
+  padding: 70px 40px;
+  margin: 0 20px;
+}
+
+.bg-blue-ligth-homev2 {
+  background-image: url(../images/homev2/circle-blue-homev2.png) !important;
+}
+
+.circle-first {
+  background-image: url(../images/homev2/bg-first-border-homev2.png);
+}
+
+.circle-second p {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 32px;
+}
+
+.success-story-cont-top.our-approach-card-homev2 {
+  margin-bottom: 4rem;
+}
+
+/* media query 1440 */
+@media (max-width: 1540px) {
+  .user-bot-text-img {
+    right: -22%;
+  }
+
+  .ai-bot-text-img {
+    right: -24%;
+  }
+  .ai-bot-text2-img{
+    right: -24%;
+  }
+  .nav-link {
+    font-style: normal;
+  }
+}
+
+.nav-link {
+  font-style: normal;
+}
+
+.social-media-links ul li a .logo-footer {
+  width: 170px;
+}
+
+.social-media-links a {
+  color: #000;
+}
+
+.footer-ul ul li a {
+  line-height: 0 !important;
+}
+
+.nav-link {
+  color: #282734;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+  padding: 0 25px !important;
+}
+
+.homev2-banner-image{
+  position: relative;
+  height: 60vw;
+  max-height: 700px;
+  margin-top: -50px;
+  overflow: hidden;
+}
+.homev2-banner-image .bgimg{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.homev2-banner-image .chatimg{
+  position: absolute;
+  right: 0px;
+  top: -10px;
+  height: 100%;
+}
+
+.footer-ul{
+  padding-top: 10px;
+}
+
+.mobilecontent{display: none;}
+.desktopcontent{display: block;}
+
+/* DAYCARE 2  */
+
+.hero-daycare-banner-text h1 span.blue-daycarev2{
+  color: #3B42C4 !important;
+}
+
+.daycarev2-banner{
+  width: 400px;
+  right: 50%;
+  left: auto;
+
+}
