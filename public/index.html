@@ -25,12 +25,10 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="cssv2/style.css">
-    <link rel="stylesheet" href="cssv2/owl.carousel.min.css">
-    <link rel="stylesheet" href="cssv2/owl.theme.default.min.css">
-    <link rel="stylesheet" href="cssv2/homev2.css">
-    <link rel="stylesheet" href="cssv2/mediaquery.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/cssv2/style.css">
+    <link rel="stylesheet" href="/cssv2/homev2.css">
+    <link rel="stylesheet" href="/cssv2/mediaquery.css">
    
  
     <!--
@@ -63,83 +61,14 @@
     -->
     <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     
-    <script>
-      $('.owl-carousel').owlCarousel({
-        dot: false,
-        loop: true,
-        margin: 10,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 1
-          },
-          1000: {
-            items: 1
-          }
-        }
-      })
+   
   
-    </script>
-  
-        <script>
-      $(document).ready(function () {
-        const owl = $('.owl-carousel');
-        const owlPrev = $('.owl-nav button.owl-prev');
-        const owlNext = $('.owl-nav button.owl-next');
-  
-        owl.owlCarousel({
-          // Your Owl Carousel options here
-          // For example:
-          items: 1,
-          loop: true,
-          onChanged: updateNavActiveState // Call the function to update active state on change
-        });
-  
-        function updateNavActiveState(event) {
-          // Get the current slide index and the total number of slides
-          const currentSlideIndex = event.item.index;
-          const slideCount = event.item.count;
-  
-          // Remove the 'disabled' class from both buttons
-          owlPrev.removeClass('disabled');
-          owlNext.removeClass('disabled');
-  
-          // Check if it's the first slide to disable the 'Prev' button
-          if (currentSlideIndex === 0) {
-            owlPrev.addClass('disabled');
-          }
-  
-          // Check if it's the last slide to disable the 'Next' button
-          if (currentSlideIndex === slideCount - 1) {
-            owlNext.addClass('disabled');
-          }
-        }
-  
-        // Initial state on document load
-        updateNavActiveState({ item: { index: 0, count: owl.find('.owl-item').length } });
-  
-        // Event listeners for navigation buttons
-        owlPrev.on('click', function () {
-          owl.trigger('prev.owl.carousel');
-        });
-  
-        owlNext.on('click', function () {
-          owl.trigger('next.owl.carousel');
-        });
-      });
-    </script>
+       
   
         <!--Smooth Navigation-->
         <script>
-      // Smooth scroll function
-      function smoothScroll(target) {
-        const element = document.querySelector(target);
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+     
   
       // Add click event listener to navigation links
       const navLinks = document.querySelectorAll('nav-link');

@@ -8,6 +8,13 @@ import 'owl.carousel/dist/assets/owl.carousel.css'; // Make sure to import the O
 
 const FitNess = () => {
 
+  ///// when user get rediret it shoulb be focuse on top 
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+
   const options = {
     items: 2, // Number of items to display in the carousel
     loop: true, // Infinite loop

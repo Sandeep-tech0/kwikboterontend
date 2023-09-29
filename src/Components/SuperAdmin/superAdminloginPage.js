@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import { superAdminlogin } from "../../Services/SuperAdmin/authApiCall";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ const Home = () => {
 
         if (loginapiData.success) {
           const { token, user } = loginapiData.data;
-          localStorage.setItem("token", token);
+          localStorage.setItem("kwikbot-superadmin-token", token);
           localStorage.setItem("user", JSON.stringify(user));
           navigate("/superadmin/users");
         } else {
@@ -84,11 +85,13 @@ const Home = () => {
             <Row className="justify-content-md-center">
               <Col lg={6} xs={6} className="mx-auto">
                 <div className="brand-logo-image">
+                <Link to="/">
                   <img
                     src="/images/superadminimages/kwikbot-bran-logo.png"
                     alt="logo"
                     className="img-fluid"
                   />
+                  </Link>
                 </div>
               </Col>
               <Col lg={6} xs={6}>

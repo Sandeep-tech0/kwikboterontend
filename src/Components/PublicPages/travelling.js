@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom';
 
 
 const Travelling = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const options = {
     items: 2, // Number of items to display in the carousel

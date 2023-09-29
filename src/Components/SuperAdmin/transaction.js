@@ -30,32 +30,19 @@ const Transaction = () => {
   };
 
   const handleDateSearch = () => {
-    if (startDate || endDate) {
-      const filteredData = allTransactionData.filter((item) => {
-        const payments = item.payments || [];
-        let dateInRange = false;
-  
-        for (const payment of payments) {
-          const transactionDate = moment(payment.paymentDate).toDate();
-  
-          if (
-            (!startDate || moment(transactionDate).isSameOrAfter(startDate, "day")) &&
-            (!endDate || moment(transactionDate).isSameOrBefore(endDate, "day"))
-          ) {
-            dateInRange = true;
-            break;
-          }
-        }
-  
-        return dateInRange;
-      });
-  
-      setFilteredData([...filteredData]); // Update filtered data with a new array
-    } else {
-      // If both start date and end date are empty, reset filteredData to allTransactionData
-      setFilteredData(allTransactionData);
-    }
+    // Ensure that the dates are in ISO format (YYYY-MM-DD) for proper comparison
+    const isoStartDate = moment(startDate).format("YYYY-MM-DD");
+    const isoEndDate = moment(endDate).format("YYYY-MM-DD");
+
+    // Filter data based on the selected date range
+    const filtered = allTransactionData.filter((item) => {
+      if (!isoStartDate || !isoEndDate) return true; // No date range selected
+      const itemDate = moment(item.paymentDate).format("YYYY-MM-DD");
+      return itemDate >= isoStartDate && itemDate <= isoEndDate;
+    });
+    setFilteredData(filtered);
   };
+
   useEffect(() => {
     const filteredData = allTransactionData.filter((item) => {
       const paymentId = item.paymentId;
@@ -179,10 +166,10 @@ const Transaction = () => {
             </Row>
 
             <Row>
-              <div className="table-res mt-5">
-                <table className="table table-bordered table-striped ">
+              <div className="table-res mt-5 table-responsive">
+                <table className="table table-bordered table-striped">
                   <thead>
-                    <tr>
+                    <tr className="d-sm-table-row">
                       <th>S.No.</th>
                       <th>Client Name</th>
                       <th scope="col">Email ID</th>
@@ -205,7 +192,6 @@ const Transaction = () => {
                           <tr key={index}>
                             <th scope="row">{index + 1}</th>
                             <td>
-                              {" "}
                               {item.firstName} {item.lastName}{" "}
                             </td>
                             <td>{item.email}</td>

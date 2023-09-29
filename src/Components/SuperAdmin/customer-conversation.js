@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import SideBarAdmin from "./side-bar";
 import Navbar from "./topNavbar";
 import { useLocation, useNavigate } from "react-router-dom";
-import { getConversationData } from "../../Services/Admin/userApiCall";
+import { getConversationData } from "../../Services/SuperAdmin/apiCall";
 import {
   TabContainer,
   ListGroup,
@@ -107,11 +107,13 @@ const CustomerConversation = () => {
   };
 
   const handleSearch = () => {
+    const isoStartDate = moment(startDate).format("YYYY-MM-DD");
+    const isoEndDate = moment(endDate).format("YYYY-MM-DD");
+
     const filteredData = conversationData.filter((item) => {
-      return (
-        moment(item.createdAt).format("YYYY-MM-DD") >= startDate &&
-        moment(item.createdAt).format("YYYY-MM-DD") <= endDate
-      );
+      if (!isoStartDate || !isoEndDate) return true;
+      const itemDate = moment(item.paymentDate).format("YYYY-MM-DD");
+      return itemDate >= isoStartDate && itemDate <= isoEndDate;
     });
     setConversationData(filteredData);
   };

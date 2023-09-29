@@ -171,6 +171,7 @@ const WizardModal = ({ show, onHide, data }) => {
               country: "",
               email: "",
               phone: "",
+              userType: "ClientUser",
               password: "",
             },
             client: {
@@ -220,6 +221,7 @@ const WizardModal = ({ show, onHide, data }) => {
         country: "",
         email: "",
         phone: "",
+        userType: "ClientUser",
         password: "",
       },
       client: {

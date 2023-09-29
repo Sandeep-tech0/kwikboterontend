@@ -263,7 +263,7 @@
 
 
 body {
-  font-family: "Aileron";
+  font-family: "Aileron" !important;
   font-size: 16px;
 }
 
@@ -532,29 +532,9 @@ footer {
   font-family: 'Poppins';
 }
 
-button.owl-prev.homev2 {
-  bottom: 40px !important;
-  left: 10%;
-  background: rgba(255, 255, 255, 0.11) !important;
-  opacity: 1 !important;
-  color: #ffffff !important;
-  top: inherit !important;
-  width: 54px;
-  height: 54px;
-  font-size: 15px !important;
-}
 
-button.owl-next.homev2 {
-  left: 16%;
-  background: rgba(255, 255, 255, 0.11) !important;
-  opacity: 1 !important;
-  color: #ffffff !important;
-  top: inherit !important;
-  bottom: 40px !important;
-  width: 54px;
-  height: 54px;
-  font-size: 15px !important;
-}
+
+
 
 .card-success-homev2 h3 {
   color: rgba(255, 255, 255, 0.9);
@@ -571,7 +551,7 @@ button.owl-next.homev2 {
 
 .card-success-homev2 p {
   color: #a0a4f1;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
@@ -766,4 +746,51 @@ button.owl-next.homev2 {
   right: 50%;
   left: auto;
 
+}
+
+
+.transform-tralate{
+  position: relative;
+  z-index: 99999;
+}
+
+button.owlprev.homev2{
+   position: absolute;
+  bottom: 50px !important;
+  left: 16% !important;
+  background: rgba(255, 255, 255, 0.11) !important;
+  opacity: 1 !important;
+  color: #ffffff !important;
+  top: inherit !important;
+  width: 54px;
+  height: 54px;
+  font-size: 15px !important;
+  border-radius: 50% !important;
+  border: none !important;
+outline: none;
+}
+button.owlnext.homev2{
+  position: absolute;
+  bottom: 50px !important;
+left: 10%;
+background: rgba(255, 255, 255, 0.11) !important;
+opacity: 1 !important;
+color: #ffffff !important;
+top: inherit !important;
+width: 54px;
+height: 54px;
+font-size: 15px !important;
+border-radius: 50% !important;
+border: none !important;
+outline: none;
+}
+
+.loader {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0.9;
 }

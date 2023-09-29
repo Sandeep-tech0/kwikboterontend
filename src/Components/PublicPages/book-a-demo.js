@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/header";
 import PlanFooter from "./components/planfooter";
 import { sendLeadMail } from "../../Services/Admin/leadApiCall";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const BookAdemo = () => {
   const [isLeadSubmitted, setIsLeadSubmitted] = React.useState(false);
   const [newErrors, setNewErrors] = React.useState({});
-
+  const [iframeLoaded, setIframeLoaded] = useState(false);
   const [leadData, setLeadData] = React.useState({
     name: "",
     email: "",
@@ -20,32 +20,45 @@ const BookAdemo = () => {
     setLeadData({ ...leadData, [name]: value });
   };
 
+  const onFoucus = (e) => {
+    const { name } = e.target;
+    setNewErrors({ ...newErrors, [name]: "" });
+  };
+
+  const handleIframeLoad = () => {
+    //Add 1 seconds delay to make sure the iframe is fully loaded
+    setTimeout(() => {
+      setIframeLoaded(true);
+    }, 1000);
+  };
+
   const sendMail = async () => {
-    console.log("leadData", leadData);
     try {
-       const newErrors = {};
-    if (!leadData.name) {
-      newErrors.name = "Name is required";
-    }
-    if (!leadData.email) {
-      newErrors.email = "Email is required";
-    }else if (!/\S+@\S+\.\S+/.test(leadData.email)) {
-      newErrors.email = "Email address is invalid";
-    }
-   
-    setNewErrors(newErrors);
-    if (Object.keys(newErrors).length === 0) {
-
-
-      const response = await sendLeadMail(leadData);
-      if(response.status === 200){
-        setIsLeadSubmitted(true);
+      const newErrors = {};
+      if (!leadData.name) {
+        newErrors.name = "Name is required";
       }
-    }
+      if (!leadData.email) {
+        newErrors.email = "Email is required";
+      } else if (!/\S+@\S+\.\S+/.test(leadData.email)) {
+        newErrors.email = "Email address is invalid";
+      }
+
+      setNewErrors(newErrors);
+      if (Object.keys(newErrors).length === 0) {
+        const response = await sendLeadMail(leadData);
+        if (response.status === 200) {
+          setIsLeadSubmitted(true);
+        }
+      }
     } catch (error) {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -72,79 +85,88 @@ const BookAdemo = () => {
             </div>
             <div class="row">
               <div class="col-lg-12 p-0">
-                <iframe
-                  src="https://calendly.com/acompworld/kwikbot-demo"
-                  width="100%"
-                  height="100%"
-                  frameborder="0"
-                  style={{ height: "730px" }}
-                ></iframe>
+                <div className="position-relative">
+               
+                  <iframe
+                    src="https://calendly.com/acompworld/kwikbot-demo"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    loading="lazy"
+                    style={{ height: "730px" }}
+                    onLoad={handleIframeLoad}
+                  ></iframe>
+                   {!iframeLoaded && <div className="loader">Loading...</div>}
+                </div>
+
                 {!isLeadSubmitted ? (
                   <div className="container px-lg-5 px-sm-3">
                     <div className="center-container-home">
                       <h1>Can't find a suitable time or need more info?</h1>
-                      <p style={{fontSize: "18px"}}>
+                      <p style={{ fontSize: "18px" }}>
                         Leave your contact details and we will reach out to you{" "}
                       </p>
                     </div>
 
-                        <div className="col-lg-10 mx-auto mb-3">
+                    <div className="col-lg-10 mx-auto mb-3">
+                      <div className="row mt-5">
+                        <div className="col-lg-4">
+                          <div className="position-relative pt-20">
+                            <input
+                              type="text"
+                              className="input-filed-profile"
+                              name="name"
+                              placeholder="Your Name*"
+                              onChange={handleChange}
+                              onFocus={onFoucus}
+                            />
+                          </div>
+                          <div style={{ height: "50px", paddingTop: "5px" }}>
+                            <span style={{ color: "red", textAlign: "center" }}>
+                              {newErrors.name}
+                            </span>
+                          </div>
+                        </div>
 
-                        <div className="row mt-5">
-                      <div className="col-lg-4">
-                        <div className="position-relative pt-20">
-                          <input
-                            type="text"
-                            className="input-filed-profile"
-                            name="name"
-                            placeholder="Your Name*"
-                            onChange={handleChange}
-                          />
+                        <div className="col-lg-4">
+                          <div className="position-relative">
+                            <input
+                              type="email"
+                              className="input-filed-profile"
+                              name="email"
+                              placeholder="Email ID*"
+                              onChange={handleChange}
+                              onFocus={onFoucus}
+                            />
+                            <div style={{ height: "50px", paddingTop: "5px" }}>
+                              <span
+                                style={{ color: "red", textAlign: "center" }}
+                              >
+                                {newErrors.email}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                        <div style={{ height: "50px", paddingTop: "5px" }}>
-                          <span style={{ color: "red", textAlign: "center" }}>
-                            {newErrors.name}
-                          </span>
-                        </div>
-                      </div>
 
-                      <div className="col-lg-4">
-                        <div className="position-relative">
-                          <input
-                            type="email"
-                            className="input-filed-profile"
-                            name="email"
-                            placeholder="Email ID*"
-                            onChange={handleChange}
-                          />
-                           <div style={{ height: "50px", paddingTop: "5px" }}>
-                          <span style={{ color: "red", textAlign: "center" }}>
-                           {newErrors.email}
-                          </span>
+                        <div className="col-lg-4">
+                          <div className="position-relative">
+                            <input
+                              type="text"
+                              className="input-filed-profile"
+                              name="phone"
+                              placeholder="Phone Number"
+                              onChange={handleChange}
+                              onFocus={onFoucus}
+                            />
+                          </div>
                         </div>
-                        </div>
-                      </div>
-
-                      <div className="col-lg-4">
-                        <div className="position-relative">
-                          <input
-                            type="text"
-                            className="input-filed-profile"
-                            name="phone"
-                            placeholder="Phone Number"
-                            onChange={handleChange}
-                          />
-                        </div>
-                       
                       </div>
                     </div>
-                        </div>
                     <div className="book-now-btn-homev2 text-center mt-lg-0-mt-sm-3">
                       <Link
                         type="submit"
                         className="save-changes "
                         onClick={sendMail}
-                        
                       >
                         Submit
                       </Link>
@@ -152,13 +174,13 @@ const BookAdemo = () => {
                   </div>
                 ) : (
                   <div className="mt-5">
-                  <div className="center-container-home">
+                    <div className="center-container-home">
                       <h1>Your response has been submitted successfully.</h1>
-                      <p style={{fontSize: "18px"}}>
+                      <p style={{ fontSize: "18px" }}>
                         Our team will reach out to you soon{" "}
                       </p>
                     </div>
-                   {/*  <div className="text-align-center submitpublicpage ">
+                    {/*  <div className="text-align-center submitpublicpage ">
                       <button type="submit" className="save-changes" onClick={(e)=>setIsLeadSubmitted(false)}>
                         Book Again
                       </button>

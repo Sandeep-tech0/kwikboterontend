@@ -26,6 +26,9 @@ const SideBarAdmin = () => {
                              className={location.pathname === '/superadmin/users' ? 'actived' : 'inactive'}><i class="fa-solid fa-chart-bar"></i> User Management</Link></li>
                               <li><Link to="/superadmin/transactions"
                              className={location.pathname === '/superadmin/transactions' ? 'actived' : 'inactive'}><i class="fa-solid fa-money-bill-transfer"></i> Transactions</Link></li>
+                               <li><Link to="/superadmin/lead"
+                             className={location.pathname === '/superadmin/lead' ? 'actived' : 'inactive'}><i class="fa-solid fa-money-bill-transfer"></i> Lead</Link></li>
+                             
                         </ul>
                     </div>
              

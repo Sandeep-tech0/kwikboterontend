@@ -3,12 +3,13 @@ import { Dropdown } from "react-bootstrap";
 
 const Header = () => {
   const location = useLocation();
+ 
 
   ///=================Logout===================///
   const handleLogout = () => {
     localStorage.removeItem("token");
     window.location.href = "/";
-    localStorage.clear();
+   
   };
 
   return (
@@ -16,9 +17,9 @@ const Header = () => {
       <header>
         <nav class="navbar navbar-expand-lg">
           <div class="container">
-            <a class="navbar-brand" href="#">
+            <Link to="/" class="navbar-brand" >
               <img src="/images/kwikbot-bran-logo.png" alt="" />
-            </a>
+            </Link>
             <button
               class="navbar-toggler"
               type="button"

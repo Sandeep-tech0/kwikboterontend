@@ -1,4 +1,4 @@
-import { apiRequest } from "../../Services/Admin/apiRequest";
+import { apiRequest } from "./apiRequestSuperAdmin";
 
 
 export const superAdminlogin = async (post) => {

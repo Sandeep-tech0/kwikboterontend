@@ -35,18 +35,20 @@ import Ecomerce from "./Components/PublicPages/ecomerce";
 import Travelling from "./Components/PublicPages/travelling";
 import TermsOfUse from "./Components/PublicPages/terms-of-use";
 import BookAdemo from "./Components/PublicPages/book-a-demo";
-
-
-
+import Lead from "./Components/SuperAdmin/Lead";
+import ErrorPage from "./Components/PublicPages/errorPage";
+import { SuperAdminRoutesProtected } from "./Components/SuperAdmin/SuperAdminProtectedRoute";
 
 function App() {
   const isUserLoggedIn = !!localStorage.getItem("token");
+  const isSuperAdminLoggedIn = !!localStorage.getItem(
+    "kwikbot-superadmin-token"
+  );
 
   return (
     <div>
       <BrowserRouter>
         <Routes>
-       
           <Route
             path="/admin/login"
             element={
@@ -119,17 +121,14 @@ function App() {
 
             <Route
               path="/admin/pay-pal"
-              element={
-                <RoutesProtected  cmp={PayPalButton} />
-              }
+              element={<RoutesProtected cmp={PayPalButton} />}
             />
-           
           </>
 
           <Route
             path="/superadmin/login"
             element={
-              isUserLoggedIn ? (
+              isSuperAdminLoggedIn ? (
                 <Navigate to="/superadmin/users" replace />
               ) : (
                 <SuperAdminLogin />
@@ -139,28 +138,31 @@ function App() {
 
           <Route
             path="/superadmin/users"
-            element={<RoutesProtected cmp={KwikbotAdminPanel} />}
+            element={<SuperAdminRoutesProtected cmp={KwikbotAdminPanel} />}
           />
           <Route
             path="/superadmin/transactions"
-            element={<RoutesProtected cmp={Transaction} />}
+            element={<SuperAdminRoutesProtected cmp={Transaction} />}
           />
           <Route
             path="/superadmin/customerconversation"
-            element={<RoutesProtected cmp={CustomerConversation} />}
+            element={<SuperAdminRoutesProtected cmp={CustomerConversation} />}
           />
+          <Route
+            path="/superadmin/lead"
+            element={<SuperAdminRoutesProtected cmp={Lead} />}
+          />
+
           <Route path="/daycare" element={<DayCare />} />
           <Route path="/" element={<Home />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/fitness" element={<FitNess />} />
-          <Route path="/ecomerce" element={<Ecomerce />} />
+          <Route path="/ecommerce" element={<Ecomerce />} />
           <Route path="/travelling" element={<Travelling />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/book-a-demo" element={<BookAdemo />} />
-        
-
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
-        
       </BrowserRouter>
       <ToastContainer position="top-center" />
     </div>

@@ -1,4 +1,4 @@
-import { apiRequest } from "../../Services/Admin/apiRequest";
+import { apiRequest } from "./apiRequestSuperAdmin";
 
 
 
@@ -96,4 +96,23 @@ export const getContent = async (userId) => {
         header: true,
     });
     return api;
+}
+
+export const getConversationData = async (userId) => {
+    const api = await apiRequest({
+        url: `/clients/conversations/${userId}`,
+        method: "get",
+        header: true,
+    });
+    return api.data;
+}
+
+
+export const AllLeadData = async ()=>{
+    const api = await apiRequest({
+        url: "/lead-captures/lead-data",
+        method: "get",
+        header: true
+    });
+    return api.data
 }

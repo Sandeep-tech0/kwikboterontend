@@ -33,7 +33,8 @@ const PayPalButton = ({ planId }) => {
   };
 
   const initialOptions = {
-    "client-id": "ARu1RMS9PGNw2XNx4GFhf-rZ52gWTLuVF1bNBVifyefMu4VEpOq0W7LuBFi3ep_-x0l2K-vFo0pA0a2b",
+    "client-id":
+      "ARu1RMS9PGNw2XNx4GFhf-rZ52gWTLuVF1bNBVifyefMu4VEpOq0W7LuBFi3ep_-x0l2K-vFo0pA0a2b",
     intent: "subscription",
     vault: true,
   };
@@ -50,7 +51,14 @@ const PayPalButton = ({ planId }) => {
                 });
               }}
               onApprove={(data, actions) => onSuccess(data, actions)}
-              onCancel={(data) => console.log("Subscription cancelled!", data)}
+              onCancel={(data) => {
+                console.log("Subscription cancelled!", data);
+                swal(
+                  "Oops...",
+                  "Something went wrong. Please try again.",
+                  "error"
+                );
+              }}
               onError={(err) => console.log("Subscription error!", err)}
             />
           </PayPalScriptProvider>

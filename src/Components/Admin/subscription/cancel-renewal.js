@@ -56,7 +56,8 @@ const CancelRenewal = ({ onHide, renewalId }) => {
   };
 
   return (
-    <div className="profile-card ">
+
+    <div className="profile-card " >
       <h5>
         Cancel Renewal{" "}
         <span
@@ -158,6 +159,7 @@ const CancelRenewal = ({ onHide, renewalId }) => {
         </div>
       </form>
     </div>
+ 
   );
 };
 

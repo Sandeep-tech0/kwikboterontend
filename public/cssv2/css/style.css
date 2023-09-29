@@ -225,8 +225,31 @@ button.owl-next {
     color: #1A1A1A !important;
     font-size: 20px !important;
 }
+button.owlnext {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    background-color: #EDF2ED !important;
+    border-radius: 50% !important;
+    width: 60px;
+    height: 60px;
+    color: #1A1A1A !important;
+    font-size: 20px !important;
+}
 
 button.owl-prev {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    background-color: #EDF2ED !important;
+    border-radius: 50% !important;
+    width: 60px;
+    height: 60px;
+    color: #1A1A1A !important;
+    font-size: 20px !important;
+}
+
+button.owlprev {
     position: absolute;
     top: 50%;
     left: -10%;

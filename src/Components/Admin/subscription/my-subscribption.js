@@ -9,7 +9,7 @@ import FirstTimeSubscription from "./FirstTimeSubscription";
 
 const MySubscribption = () => {
   const height = {
-    height: "100vh",
+    height: "163vh",
   };
 
   const clientId = localStorage.getItem("clientId");
@@ -59,8 +59,14 @@ const MySubscribption = () => {
       setInitialamount(response.data.amount);
       setFrequency(response.data.frequency);
       setSubId(response.data._id);
-      if ( response.data.renewals[response.data.renewals.length - 1] &&  response.data.renewals[response.data.renewals.length - 1].cancellationDate) {
-        const cancellationDate =  response.data.renewals[response.data.renewals.length - 1].cancellationDate;
+      if (
+        response.data.renewals[response.data.renewals.length - 1] &&
+        response.data.renewals[response.data.renewals.length - 1]
+          .cancellationDate
+      ) {
+        const cancellationDate =
+          response.data.renewals[response.data.renewals.length - 1]
+            .cancellationDate;
         if (cancellationDate) {
           setSubscriptionEndDate(cancellationDate);
         }
@@ -73,17 +79,20 @@ const MySubscribption = () => {
       if (
         response.data.renewals[response.data.renewals.length - 1]
           .isCancelled === false &&
-        response.data.isRenew === true
+        response.data.isRenew === false
       ) {
         setcancelRenewalPage(true); // Cancel renewal
       }
+
       if (
         response.data.renewals[response.data.renewals.length - 1]
           .isCancelled === true &&
-        response.data.isRenew === true
+        response.data.isRenew === false
       ) {
         setsubscribeAgainPage(true); // Subscribe again
       }
+
+      
     } catch (error) {
       console.log(error);
     }

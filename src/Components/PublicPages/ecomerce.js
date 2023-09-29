@@ -9,6 +9,10 @@ import { Link } from 'react-router-dom';
 
 
 const Ecomerce = ({ items }) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const options = {
     items: 2, // Number of items to display in the carousel
     loop: true, // Infinite loop
@@ -72,7 +76,7 @@ const Ecomerce = ({ items }) => {
                 <h1>Revolutionizing <span>E-Commerce <br/> Through </span> AI-Powered Customer <br/>  Interactions  </h1>
                 <p>Turn browsers into buyers and elevate your online shopping experience—24/7, no downtime.</p>
                 <div class="book-now-day-care">
-                  <Link to="/book-a-demo">Book a Demo</Link>
+                   <Link to="/book-a-demo">Book a Demo</Link>
                 </div>
               </div>
             </div>

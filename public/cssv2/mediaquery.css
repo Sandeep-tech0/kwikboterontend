@@ -268,6 +268,10 @@
     .homev2-banner-heading {
         padding: 40px 10px;        
     }
+
+    .custom-nav.transform-tralate {
+  display: none;
+    }
     .home-v2 {
         padding: 0 8px;
     }
